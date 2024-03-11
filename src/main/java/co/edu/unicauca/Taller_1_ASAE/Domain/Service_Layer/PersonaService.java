@@ -1,4 +1,4 @@
-package co.edu.unicauca.Taller_1_ASAE.Domain.Service;
+package co.edu.unicauca.Taller_1_ASAE.Domain.Service_Layer;
 
 import java.util.List;
 
@@ -7,9 +7,9 @@ import org.modelmapper.TypeToken;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import co.edu.unicauca.Taller_1_ASAE.Domain.DTO.PersonaDTO;
-import co.edu.unicauca.Taller_1_ASAE.Domain.Models.Persona;
-import co.edu.unicauca.Taller_1_ASAE.Domain.Repository.PersonaRepository;
+import co.edu.unicauca.Taller_1_ASAE.Domain.Acces_Layer.Models.Persona;
+import co.edu.unicauca.Taller_1_ASAE.Domain.Acces_Layer.Repository.PersonaRepository;
+import co.edu.unicauca.Taller_1_ASAE.Domain.Service_Layer.DTO.PersonaDTO;
 
 @Service
 public class PersonaService implements IPersonaService {

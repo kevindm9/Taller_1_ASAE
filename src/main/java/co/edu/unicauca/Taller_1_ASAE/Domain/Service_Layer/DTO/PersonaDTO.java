@@ -1,7 +1,6 @@
-package co.edu.unicauca.Taller_1_ASAE.Domain.DTO;
-import co.edu.unicauca.Taller_1_ASAE.Domain.Models.EEstadoCivil;
-import co.edu.unicauca.Taller_1_ASAE.Domain.Models.EGenero;
-
+package co.edu.unicauca.Taller_1_ASAE.Domain.Service_Layer.DTO;
+import co.edu.unicauca.Taller_1_ASAE.Domain.Acces_Layer.Models.EEstadoCivil;
+import co.edu.unicauca.Taller_1_ASAE.Domain.Acces_Layer.Models.EGenero;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;

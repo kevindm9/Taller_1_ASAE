@@ -1,14 +1,13 @@
-package co.edu.unicauca.Taller_1_ASAE.Domain.Repository;
+package co.edu.unicauca.Taller_1_ASAE.Domain.Acces_Layer.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
-import co.edu.unicauca.Taller_1_ASAE.Domain.Models.EEstadoCivil;
-import co.edu.unicauca.Taller_1_ASAE.Domain.Models.EGenero;
-import co.edu.unicauca.Taller_1_ASAE.Domain.Models.Persona;
-
+import co.edu.unicauca.Taller_1_ASAE.Domain.Acces_Layer.Models.EEstadoCivil;
+import co.edu.unicauca.Taller_1_ASAE.Domain.Acces_Layer.Models.EGenero;
+import co.edu.unicauca.Taller_1_ASAE.Domain.Acces_Layer.Models.Persona;
 
 
 @Repository

@@ -1,4 +1,4 @@
-package co.edu.unicauca.Taller_1_ASAE.Domain.mapper;
+package co.edu.unicauca.Taller_1_ASAE.Domain.Service_Layer.mapper;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;

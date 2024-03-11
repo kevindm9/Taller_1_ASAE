@@ -1,4 +1,4 @@
-package co.edu.unicauca.Taller_1_ASAE.Domain.Models;
+package co.edu.unicauca.Taller_1_ASAE.Domain.Acces_Layer.Models;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

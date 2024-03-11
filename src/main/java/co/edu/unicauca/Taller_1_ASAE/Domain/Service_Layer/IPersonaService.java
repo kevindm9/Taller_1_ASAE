@@ -1,8 +1,8 @@
-package co.edu.unicauca.Taller_1_ASAE.Domain.Service;
+package co.edu.unicauca.Taller_1_ASAE.Domain.Service_Layer;
 
 import java.util.List;
 
-import co.edu.unicauca.Taller_1_ASAE.Domain.DTO.PersonaDTO;
+import co.edu.unicauca.Taller_1_ASAE.Domain.Service_Layer.DTO.PersonaDTO;
 
 public interface IPersonaService {
 

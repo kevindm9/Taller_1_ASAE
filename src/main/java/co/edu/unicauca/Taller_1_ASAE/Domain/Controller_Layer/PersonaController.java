@@ -1,4 +1,4 @@
-package co.edu.unicauca.Taller_1_ASAE.Domain.Controllers;
+package co.edu.unicauca.Taller_1_ASAE.Domain.Controller_Layer;
 
 import java.util.List;
 
@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import co.edu.unicauca.Taller_1_ASAE.Domain.DTO.PersonaDTO;
-import co.edu.unicauca.Taller_1_ASAE.Domain.Service.IPersonaService;
+import co.edu.unicauca.Taller_1_ASAE.Domain.Service_Layer.IPersonaService;
+import co.edu.unicauca.Taller_1_ASAE.Domain.Service_Layer.DTO.PersonaDTO;
 
 @RestController
 @RequestMapping("/api")
