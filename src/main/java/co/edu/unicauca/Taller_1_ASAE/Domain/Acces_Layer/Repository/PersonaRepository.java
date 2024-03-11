@@ -26,7 +26,7 @@ public class PersonaRepository {
 	}
 
 	public Persona findById(Integer id) {
-		System.out.println("Invocando a consultar un cliente");
+		System.out.println("Invocando a consultar una Persona");
 		Persona objCliente = null;
 
 		for (Persona cliente : listaDePErsonas) {
@@ -40,7 +40,7 @@ public class PersonaRepository {
 	}
 
 	public Persona save(Persona cliente) {
-		System.out.println("Invocando a almacenar cliente");
+		System.out.println("Invocando a almacenar Persona");
 		Persona objCliente = null;
 		if (this.listaDePErsonas.add(cliente)) {
 			objCliente = cliente;
@@ -50,7 +50,7 @@ public class PersonaRepository {
 	}
 
 	public Persona update(Integer id, Persona cliente) {
-		System.out.println("Invocando a actualizar un cliente");
+		System.out.println("Invocando a actualizar una Persona");
 		Persona objCliente = null;
 
 		for (int i = 0; i < this.listaDePErsonas.size(); i++) {
@@ -65,7 +65,7 @@ public class PersonaRepository {
 	}
 
 	public boolean delete(Integer id) {
-		System.out.println("Invocando a eliminar un cliente");
+		System.out.println("Invocando a eliminar una Persona");
 		boolean bandera = false;
 
 		for (int i = 0; i < this.listaDePErsonas.size(); i++) {

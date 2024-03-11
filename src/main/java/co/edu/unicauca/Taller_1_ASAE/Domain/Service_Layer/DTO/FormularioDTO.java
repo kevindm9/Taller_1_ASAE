@@ -1,6 +1,9 @@
 package co.edu.unicauca.Taller_1_ASAE.Domain.Service_Layer.DTO;
 
-import co.edu.unicauca.Taller_1_ASAE.Domain.Acces_Layer.Models.ERespuesta;
+import java.util.ArrayList;
+
+
+import co.edu.unicauca.Taller_1_ASAE.Domain.Acces_Layer.Models.Pregunta;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
@@ -10,9 +13,8 @@ import lombok.Setter;
 @AllArgsConstructor
 public class FormularioDTO {
 
-    private Integer id;
-    private String descripcion;
+     private Integer id;
+    private String tipo;
+    private ArrayList<Pregunta> preguntas;
     private String formato;
-    private ERespuesta respuesta;
-
 }

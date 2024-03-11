@@ -1,5 +1,7 @@
 package co.edu.unicauca.Taller_1_ASAE.Domain.Acces_Layer.Models;
 
+import java.util.ArrayList;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
@@ -11,8 +13,8 @@ public class Formulario {
 
     private Integer id;
     private String tipo;
-    private String descripcion;
+    private ArrayList<Pregunta> preguntas;
     private String formato;
-    private ERespuesta respuesta;
+   
 
 }

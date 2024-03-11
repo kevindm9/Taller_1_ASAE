@@ -6,24 +6,25 @@ import java.util.List;
 import org.springframework.stereotype.Repository;
 
 import co.edu.unicauca.Taller_1_ASAE.Domain.Acces_Layer.Models.Formulario;
+import co.edu.unicauca.Taller_1_ASAE.Domain.Acces_Layer.Models.Pregunta;
 
 @Repository
-public class FormatoARepository {
+public class FormularioRepository {
 
     private ArrayList<Formulario> listaFormatoA;
 
-    public FormatoARepository() {
+    public FormularioRepository() {
         this.listaFormatoA = new ArrayList<Formulario>();
         this.cargarFormatos();
     }
 
     public List<Formulario> findAll() {
-        System.out.println("Invocando a Lista de Personas");
+        System.out.println("Invocando a Listar Formulario");
         return this.listaFormatoA;
     }
 
     public Formulario findById(Integer id) {
-        System.out.println("Invocando a consultar un cliente");
+        System.out.println("Invocando a consultar un Formulario");
         Formulario objFormatoA = null;
 
         for (Formulario formatoA : listaFormatoA) {
@@ -37,7 +38,7 @@ public class FormatoARepository {
     }
 
     public Formulario save(Formulario formatoA) {
-        System.out.println("Invocando a almacenar cliente");
+        System.out.println("Invocando a almacenar un Formulario");
         Formulario objFormatoA = null;
         if (this.listaFormatoA.add(formatoA)) {
             objFormatoA = formatoA;
@@ -47,7 +48,7 @@ public class FormatoARepository {
     }
 
     public Formulario update(Integer id, Formulario formatoA) {
-        System.out.println("Invocando a actualizar un cliente");
+        System.out.println("Invocando a actualizar un Formulario");
         Formulario objFormatoA = null;
 
         for (int i = 0; i < this.listaFormatoA.size(); i++) {
@@ -62,7 +63,7 @@ public class FormatoARepository {
     }
 
     public boolean delete(Integer id) {
-        System.out.println("Invocando a eliminar un cliente");
+        System.out.println("Invocando a eliminar un Formulario");
         boolean bandera = false;
 
         for (int i = 0; i < this.listaFormatoA.size(); i++) {
@@ -77,6 +78,8 @@ public class FormatoARepository {
     }
 
     private void cargarFormatos() {
-
+        ArrayList<Pregunta> P1=new ArrayList<Pregunta>();
+        
+        Formulario F1= new Formulario(1, "Factores de psicosocial intro",P1 , "Formato A");
     }
 }
