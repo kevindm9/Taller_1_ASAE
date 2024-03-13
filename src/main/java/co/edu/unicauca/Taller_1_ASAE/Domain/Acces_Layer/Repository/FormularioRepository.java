@@ -1,10 +1,11 @@
 package co.edu.unicauca.Taller_1_ASAE.Domain.Acces_Layer.Repository;
 
 import java.util.ArrayList;
-import java.util.List;
+
 
 import org.springframework.stereotype.Repository;
 
+import co.edu.unicauca.Taller_1_ASAE.Domain.Acces_Layer.Models.ERespuesta;
 import co.edu.unicauca.Taller_1_ASAE.Domain.Acces_Layer.Models.Formulario;
 import co.edu.unicauca.Taller_1_ASAE.Domain.Acces_Layer.Models.Pregunta;
 
@@ -18,7 +19,7 @@ public class FormularioRepository {
         this.cargarFormatos();
     }
 
-    public List<Formulario> findAll() {
+    public ArrayList<Formulario> findAll() {
         System.out.println("Invocando a Listar Formulario");
         return this.listaFormatoA;
     }
@@ -78,8 +79,20 @@ public class FormularioRepository {
     }
 
     private void cargarFormatos() {
-        ArrayList<Pregunta> P1=new ArrayList<Pregunta>();
-        
-        Formulario F1= new Formulario(1, "Factores de psicosocial intro",P1 , "Formato A");
+        ArrayList<Pregunta> preguntasL=new ArrayList<Pregunta>();
+        Pregunta p =new Pregunta("El ruido en el lugar donde trabaja es Molesto", ERespuesta.Algunas_Veces);
+        preguntasL.add(p);
+        Pregunta p1 =new Pregunta("En el lugar donde trabaja hace mucho frio", ERespuesta.Casi_Siempre);
+        preguntasL.add(p1);
+        Pregunta p2 =new Pregunta("En el lugar donde trabaja hace mucho calor", ERespuesta.Casi_Nunca);
+        preguntasL.add(p2);
+        Pregunta p3 =new Pregunta("El aire en el lugar de trabajo es fresco", ERespuesta.Casi_Siempre);
+        preguntasL.add(p3);
+        Pregunta p4 =new Pregunta("La luz en el lugar de trabajo es agradable", ERespuesta.Siempre);
+        preguntasL.add(p4);
+        Formulario F1= new Formulario(1, "Factores de psicosocial intro",preguntasL , "Formato A",1001);
+        listaFormatoA.add(F1);
+        Formulario F2= new Formulario(1, "Factores de psicosocial intro",preguntasL , "Formato B",1001);
+        listaFormatoA.add(F2);
     }
 }

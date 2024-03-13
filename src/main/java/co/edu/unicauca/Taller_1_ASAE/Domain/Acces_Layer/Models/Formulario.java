@@ -15,6 +15,5 @@ public class Formulario {
     private String tipo;
     private ArrayList<Pregunta> preguntas;
     private String formato;
-   
-
+    private Integer idPersona;
 }

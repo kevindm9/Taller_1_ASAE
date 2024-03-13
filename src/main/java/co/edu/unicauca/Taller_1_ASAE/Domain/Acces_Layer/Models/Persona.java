@@ -1,10 +1,16 @@
 package co.edu.unicauca.Taller_1_ASAE.Domain.Acces_Layer.Models;
+
+
+import java.util.ArrayList;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 @Getter
 @Setter
 @AllArgsConstructor
+@NoArgsConstructor
 public class Persona {
 
     private Integer id;
@@ -15,9 +21,5 @@ public class Persona {
     private String ciudad;
     private EGenero genero;
     private EEstadoCivil estadoCivil;
-    
-
-    public Persona(){}
-    
-
+    private ArrayList<Formulario> formularios;
 }

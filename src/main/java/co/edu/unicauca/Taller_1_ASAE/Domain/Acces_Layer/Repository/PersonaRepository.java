@@ -7,6 +7,7 @@ import org.springframework.stereotype.Repository;
 
 import co.edu.unicauca.Taller_1_ASAE.Domain.Acces_Layer.Models.EEstadoCivil;
 import co.edu.unicauca.Taller_1_ASAE.Domain.Acces_Layer.Models.EGenero;
+import co.edu.unicauca.Taller_1_ASAE.Domain.Acces_Layer.Models.Formulario;
 import co.edu.unicauca.Taller_1_ASAE.Domain.Acces_Layer.Models.Persona;
 
 
@@ -14,6 +15,7 @@ import co.edu.unicauca.Taller_1_ASAE.Domain.Acces_Layer.Models.Persona;
 public class PersonaRepository {
 
 	private ArrayList<Persona> listaDePErsonas;
+	FormularioRepository formularioRepository;
 
 	public PersonaRepository() {
 		this.listaDePErsonas = new ArrayList<Persona>();
@@ -80,14 +82,18 @@ public class PersonaRepository {
 	}
 
 	private void cargarClientes() {
-		Persona objCliente1 = new Persona(1001, "Juan", "Perez", "juan@unicauca.edu.co", true,"Popayan",EGenero.Masculino,EEstadoCivil.Soltero);
+
+		ArrayList<Formulario> F =new ArrayList<Formulario>();
+		F=formularioRepository.findAll();
+		Persona objCliente1 = new Persona(1001, "Juan", "Perez", "juan@unicauca.edu.co", true,"Popayan",EGenero.Masculino,EEstadoCivil.Soltero,F);
 		this.listaDePErsonas.add(objCliente1);
-		Persona objCliente2 = new Persona(2, "Catalina", "Lopez", "catalina@unicauca.edu.co", true,"Popayan",EGenero.Femenino,EEstadoCivil.Casado);
+		Persona objCliente2 = new Persona(2, "Catalina", "Lopez", "catalina@unicauca.edu.co", true,"Popayan",EGenero.Femenino,EEstadoCivil.Casado,F);
 		this.listaDePErsonas.add(objCliente2);
-		Persona objCliente3 = new Persona(3, "Sandra", "Sanchez", "Sandra@unicauca.edu.co",  true,"Popayan",EGenero.Femenino,EEstadoCivil.Soltero);
+		Persona objCliente3 = new Persona(3, "Sandra", "Sanchez", "Sandra@unicauca.edu.co",  true,"Popayan",EGenero.Femenino,EEstadoCivil.Soltero,F);
 		this.listaDePErsonas.add(objCliente3);
-		Persona objCliente = new Persona(4, "Andres", "Perez", "andres@unicauca.edu.co",  true,"Popayan",EGenero.Masculino,EEstadoCivil.Divorciado);
+		Persona objCliente = new Persona(4, "Andres", "Perez", "andres@unicauca.edu.co",  true,"Popayan",EGenero.Masculino,EEstadoCivil.Divorciado,F);
 		this.listaDePErsonas.add(objCliente);
+
 	}
 
 }
