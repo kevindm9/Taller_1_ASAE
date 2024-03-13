@@ -18,7 +18,7 @@ public class PersonaDTO {
 	private String nombre;
 	private String apellido;
 	private String email;
-    private Boolean autorizo=true;
+    private Boolean Autorizo;
     private String ciudad;
     private EGenero genero;
     private EEstadoCivil estadoCivil;

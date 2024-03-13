@@ -32,8 +32,8 @@ public class PersonaService implements IPersonaService {
 	@Override
 	public PersonaDTO findById(Integer id) {
 		Persona objCLienteEntity = this.servicioAccesoBaseDatos.findById(id);
-		PersonaDTO clienteDTO = this.modelMapper.map(objCLienteEntity, PersonaDTO.class);
-		return clienteDTO;
+		PersonaDTO personaDTO = this.modelMapper.map(objCLienteEntity, PersonaDTO.class);
+		return personaDTO;
 	}
 
 	@Override

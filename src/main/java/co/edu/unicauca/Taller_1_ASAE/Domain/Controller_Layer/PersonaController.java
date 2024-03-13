@@ -57,9 +57,10 @@ public class PersonaController {
 		return objCliente;
 	}
 
-	@PutMapping("/clientes/{id}")
+	@PutMapping("/Persona/{id}")
 	public PersonaDTO update(@RequestBody PersonaDTO cliente, @PathVariable Integer id) {
 		PersonaDTO objCliente = null;
+		System.out.println("aqui");
 		PersonaDTO clienteActual = clienteService.findById(id);
 		if (clienteActual != null) {
 			objCliente = clienteService.update(id, cliente);
@@ -67,7 +68,7 @@ public class PersonaController {
 		return objCliente;
 	}
 
-	@DeleteMapping("/clientes/{id}")
+	@DeleteMapping("/Persona/{id}")
 	public Boolean delete(@PathVariable Integer id) {
 		Boolean bandera = false;
 		PersonaDTO clienteActual = clienteService.findById(id);

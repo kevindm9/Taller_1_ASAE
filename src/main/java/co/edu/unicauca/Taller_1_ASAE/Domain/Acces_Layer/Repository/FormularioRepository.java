@@ -29,7 +29,7 @@ public class FormularioRepository {
         Formulario objFormatoA = null;
 
         for (Formulario formatoA : listaFormatoA) {
-            if (formatoA.getId() == id) {
+            if (formatoA.getIdFormulario() == id) {
                 objFormatoA = formatoA;
                 break;
             }
@@ -53,7 +53,7 @@ public class FormularioRepository {
         Formulario objFormatoA = null;
 
         for (int i = 0; i < this.listaFormatoA.size(); i++) {
-            if (this.listaFormatoA.get(i).getId() == id) {
+            if (this.listaFormatoA.get(i).getIdFormulario() == id) {
                 this.listaFormatoA.set(i, formatoA);
                 objFormatoA = formatoA;
                 break;
@@ -68,7 +68,7 @@ public class FormularioRepository {
         boolean bandera = false;
 
         for (int i = 0; i < this.listaFormatoA.size(); i++) {
-            if (this.listaFormatoA.get(i).getId() == id) {
+            if (this.listaFormatoA.get(i).getIdFormulario() == id) {
                 this.listaFormatoA.remove(i);
                 bandera = true;
                 break;
@@ -78,7 +78,7 @@ public class FormularioRepository {
         return bandera;
     }
 
-    private void cargarFormatos() {
+    public void cargarFormatos() {
         ArrayList<Pregunta> preguntasL=new ArrayList<Pregunta>();
         Pregunta p =new Pregunta("El ruido en el lugar donde trabaja es Molesto", ERespuesta.Algunas_Veces);
         preguntasL.add(p);
@@ -90,9 +90,9 @@ public class FormularioRepository {
         preguntasL.add(p3);
         Pregunta p4 =new Pregunta("La luz en el lugar de trabajo es agradable", ERespuesta.Siempre);
         preguntasL.add(p4);
-        Formulario F1= new Formulario(1, "Factores de psicosocial intro",preguntasL , "Formato A",1001);
+        Formulario F1= new Formulario(1, "Factores de psicosocial intro",preguntasL , "Formato A");
         listaFormatoA.add(F1);
-        Formulario F2= new Formulario(1, "Factores de psicosocial intro",preguntasL , "Formato B",1001);
+        Formulario F2= new Formulario(1, "Factores de psicosocial intro",preguntasL , "Formato B");
         listaFormatoA.add(F2);
     }
 }

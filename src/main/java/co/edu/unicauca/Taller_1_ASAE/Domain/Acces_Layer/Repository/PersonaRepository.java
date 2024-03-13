@@ -15,11 +15,12 @@ import co.edu.unicauca.Taller_1_ASAE.Domain.Acces_Layer.Models.Persona;
 public class PersonaRepository {
 
 	private ArrayList<Persona> listaDePErsonas;
-	FormularioRepository formularioRepository;
+	private FormularioRepository formularioRepository=new FormularioRepository();
 
 	public PersonaRepository() {
 		this.listaDePErsonas = new ArrayList<Persona>();
 		cargarClientes();
+		//this.formularioRepository.cargarFormatos();
 	}
 
 	public List<Persona> findAll() {
@@ -85,7 +86,7 @@ public class PersonaRepository {
 
 		ArrayList<Formulario> F =new ArrayList<Formulario>();
 		F=formularioRepository.findAll();
-		Persona objCliente1 = new Persona(1001, "Juan", "Perez", "juan@unicauca.edu.co", true,"Popayan",EGenero.Masculino,EEstadoCivil.Soltero,F);
+		Persona objCliente1 = new Persona(1, "Juan", "Perez", "juan@unicauca.edu.co", true,"Popayan",EGenero.Masculino,EEstadoCivil.Soltero,F);
 		this.listaDePErsonas.add(objCliente1);
 		Persona objCliente2 = new Persona(2, "Catalina", "Lopez", "catalina@unicauca.edu.co", true,"Popayan",EGenero.Femenino,EEstadoCivil.Casado,F);
 		this.listaDePErsonas.add(objCliente2);
@@ -93,7 +94,6 @@ public class PersonaRepository {
 		this.listaDePErsonas.add(objCliente3);
 		Persona objCliente = new Persona(4, "Andres", "Perez", "andres@unicauca.edu.co",  true,"Popayan",EGenero.Masculino,EEstadoCivil.Divorciado,F);
 		this.listaDePErsonas.add(objCliente);
-
 	}
 
 }
